@@ -24,7 +24,8 @@ public class Funcionario {
 
     // valor incluido superior a 8 é calculado como hora extra
     // valor incluido inferior a 8, a diferenca deverá ser descontada
-    public void incluirHorasDiarias() {
+    // é chamado uma vez ao dia
+    public void incluirHorasDiarias(int horas) {
 
     }
 
@@ -48,6 +49,7 @@ public class Funcionario {
     public void save(Funcionario funcionario) {
         // converte funcionario para funcionarioEntity
         FuncionarioEntity entity = new FuncionarioEntity();
+        entity.setId(funcionario.getId());
         repo.save(entity);
     }
 }

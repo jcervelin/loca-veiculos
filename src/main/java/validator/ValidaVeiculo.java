@@ -3,6 +3,7 @@ package validator;
 import model.Veiculo;
 
 import java.util.Collection;
+import java.util.List;
 
 public class ValidaVeiculo {
 
@@ -22,6 +23,12 @@ public class ValidaVeiculo {
                                 "] inválido"
                 );
             }
+        }
+    }
+
+    public void validar(List<Veiculo> veiculos) {
+        for (Veiculo veiculo : veiculos) {
+            validar(veiculo);
         }
     }
 

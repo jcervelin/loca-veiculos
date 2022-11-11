@@ -15,6 +15,15 @@ public abstract class Veiculo {
         this.ano = ano;
     }
 
+    public Veiculo(String marca, String modelo, int ano, int numPassageiros) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.numPassageiros = numPassageiros;
+    }
+
+    private String id;
+
     private String marca;
     private String modelo;
     private int ano;

@@ -9,6 +9,6 @@ public class Bicicleta extends Veiculo {
 
     @Override
     void locomover() {
-
+        // pedala, menino
     }
 }

@@ -1,7 +1,6 @@
 package repositorio;
 
 import java.util.Collection;
-import java.util.List;
 
 public interface BaseDao<E, K> {
 

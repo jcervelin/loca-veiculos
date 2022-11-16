@@ -1,8 +1,5 @@
 import model.*;
-import validator.ValidaAnoVeiculo;
-import validator.ValidaMarca;
-import validator.ValidaModelo;
-import validator.ValidaVeiculo;
+import validator.*;
 
 import java.util.*;
 
@@ -19,10 +16,14 @@ public class Main {
 
         ValidaVeiculo validaVeiculo = new ValidaVeiculo(List.of(
                 new ValidaMarca(),
-                new ValidaAnoVeiculo(),
                 new ValidaModelo()));
 
+        ValidaVeiculo validaVeiculo1 = new ValidaVeiculo(List.of(
+                new ValidaNumPassageiros()));
+
         validaVeiculo.validar(veiculos);
+
+
     }
 
 }

@@ -3,5 +3,6 @@ package validator;
 public enum ValidacaoType {
     ANO,
     MARCA,
-    MODELO
+    MODELO,
+    NUM_PASSAGEIROS
 }

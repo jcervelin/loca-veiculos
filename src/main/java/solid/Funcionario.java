@@ -10,7 +10,8 @@ public class Funcionario {
     private String nome;
     private int horasDiarias;
     private int horasExtras;
-    private double salarioHora;
+    private double salarioHora = 30;
+
     public int totalHorasTrabalhadas() {
         return horasDiarias + horasExtras;
     }
@@ -25,7 +26,6 @@ public class Funcionario {
         }
     }
     
-    
     public void save(Funcionario funcionario) {
         // converte funcionario para funcionarioEntity
         FuncionarioEntity entity = new FuncionarioEntity();
@@ -35,6 +35,10 @@ public class Funcionario {
     public static void main(String[] args) {
         Funcionario f = new Funcionario();
         f.incluirHorasDiarias(9);
+        System.out.println(RH.calcularHoraExtra(f));
+        System.out.println(RH.reportarHorasTrabalhadas(f));
+        System.out.println(Financeiro.calcularHoraExtra(f));
+        System.out.println(Financeiro.calcularSalario(f));
         System.out.println(f.horasDiarias);
     }
 }

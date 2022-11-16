@@ -24,20 +24,8 @@ public class Funcionario {
             this.horasDiarias -= ((MAX_HORAS_DIARIAS - horasDiarias));
         }
     }
-    // Implementar logica para salario:
-    // totalHorasTrabalhadas() * salario por hora
-    public double calcularSalario() {
-        return (totalHorasTrabalhadas() * salarioHora);
-    }
-    // Implementar logica para salario:
-    // (horasExtras * (salarioHora * 0.5))
-    public double calcularHoraExtra() {
-        return (horasExtras * (salarioHora * 0.5));
-    }
-    // as horas reportadas sao horasDiarias + horasExtras
-    public int reportarHorasTrabalhadas() {
-        return horasDiarias + horasExtras;
-    }
+    
+    
     public void save(Funcionario funcionario) {
         // converte funcionario para funcionarioEntity
         FuncionarioEntity entity = new FuncionarioEntity();
